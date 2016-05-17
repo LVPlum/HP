@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5兼容按钮</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<style>
+		    body{
+		    	overflow: hidden;
+		    	width: 100%;
+		    	height: 100%;
+		    }
+		    .title{
+		    	color: #04BE02;
+				text-align: center;
+				font-size: 18px;
+				font-weight: bold;
+				border-radius: 5px;
+				cursor: pointer;
+				overflow: hidden;
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 10px;
+				margin-bottom: 200px;
+		    }
+			.div{
+				background: #04BE02;
+				color: white;
+				text-align: center;
+				font-size: 18px;
+				border-radius: 5px;
+				cursor: pointer;
+				overflow: hidden;
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 10px;
+				/*margin-top: 60%;*/
+			}
+			.bg-color{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: grey;
+				top: 0;
+				left: 0;
+				opacity: 0.8;
+				overflow: hidden;
+			}
+			.container-alert{
+				position: absolute;
+				top: 200px;
+				background: #FFFFFF;
+				width: 85%;
+				height: auto;
+				line-height: 1.6;
+				border: 1px solid lightgrey;
+				border-radius: 5px;
+				overflow: hidden;
+				display: none;
+			}
+			.container-alert h1{
+				margin: 6px;
+				padding: 0 16px;
+				font-size: 17px;
+				color: black;
+				text-align: center;
+			}
+			.container-alert p{
+				color: lightgrey;
+				font-size: 15px;
+				padding: 12px;
+				text-align: center;
+				border-bottom: 1px solid lightgrey;
+			}
+			.container-alert a{
+				display: block;
+				font-size: 17px;
+				text-align: center;
+				color: #04BE02;
+				cursor: pointer;
+			}
+			#container1 a{
+				display: inline-block;
+				width: 48%;
+				margin: 0px auto 0px; 
+				color: #0bb20c;
+				font-size: 17px;
+				background: white;
+				text-align: center;
+			}
+			#container1 a.special{
+				color: black;
+				border-right: 1px solid lightgrey;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">Dialog</div>
+		<div class="div" id="on1">点击弹出Dialog样式一</div>
+		<div class="div" id="on2">点击弹出Dialog样式二</div>
+		<div id="bg"></div>
+		<div id="container1" class="container-alert">
+			<h1>弹窗标题</h1>
+			<p id="text">自定义弹窗内容，居左对齐显示，<br/>告知需要确认的信息等</p>
+			<a id="no" title="取消" class="special">取消</a>
+			<a id="yes" title="确定">确定</a>
+		</div>
+		<div id="container2" class="container-alert">
+			<h1>弹窗标题</h1>
+			<p id="text">弹窗内容，告知当前页面信息等</p>
+			<a id="alertY" title="确定">确定</a>
+		</div>
+		<script>
+		    var w = $(window).width();
+		    var h = $(window).height();
+		    $('#on1').click(function(){
+		    	$('#bg').addClass('bg-color');
+				$('#container1').css({
+					'left':w*0.075+'px',
+					'display':'block'
+				});
+		    });
+		    $('#no').click(function(){
+				$('#bg').removeClass('bg-color');
+				$('#container1').css({
+					'display':'none'
+				})
+			});
+			$('#yes').click(function(){
+				$('#bg').removeClass('bg-color');
+				$('#container1').css({
+					'display':'none'
+				})
+			});
+			$('#on2').click(function(){
+				$('#bg').addClass('bg-color');
+				$('#container2').css({
+					'left':w*0.075+'px',
+					'display':'block'
+				});
+			});
+			$('#alertY').click(function(){
+				$('#bg').removeClass('bg-color');
+				$('#container2').css({
+					'display':'none'
+				})
+			});
+		</script>
+	</body>
+</html>

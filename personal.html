@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>About Me </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="css/5grid/init.js?use=mobile,desktop"></script>
+		<script src="js/jquery.formerize-1.1.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/5grid/core.css" />
+			<link rel="stylesheet" href="css/5grid/core-desktop.css" />
+			<link rel="stylesheet" href="css/5grid/core-1200px.css" />
+			<link rel="stylesheet" href="css/5grid/core-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="wrapper">
+			
+			<!-- Nav -->
+				<nav id="nav">
+					<a href="#me" class="icon icon-user active"><span>Me</span></a>
+					<a href="#work" class="icon icon-folder"><span>Work</span></a>
+					<a href="#email" class="icon icon-mail"><span>Email Me</span></a>
+				</nav>
+
+			<!-- Main -->
+				<div id="main">
+					
+					<!-- Me -->
+						<article id="me" class="panel">
+							<header>
+								<h1>韩义&nbsp;&nbsp;Han Bote</h1>
+								<span class="byline">Junior Front End Software Engineer</span>
+							</header>
+							<a href="#work" class="jumplink pic">
+								<span class="jumplink arrow icon icon-right"><span>See my work</span></span>
+								<img src="images/me.jpg" alt="" />
+							</a>
+						</article>
+
+					<!-- Work --> 
+						<article id="work" class="panel">
+							<header>
+								<h2>Work</h2>
+							</header>
+							<p>
+								虽然入门时间很短，目前能比较熟练的使用html，css以及js，也没有完整的做过很多东西，但学习之余也写过几个静态页面和css3,和jq动画，展示如下：
+							</p>
+							<section class="5grid is-gallery">
+								<div class="row">
+									<div class="4u">
+										<a href="xiaomi.html" class="image image-full"><img src="images/1.jpg" alt=""></a>
+									</div>
+									<div class="4u">
+										<a href="button.html" class="image image-full"><img src="images/2.jpg" alt=""></a>
+									</div>
+									<div class="4u">
+										<a href="work.html" class="image image-full"><img src="images/3.jpg" alt=""></a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="4u">
+										<a href="js-color.html" class="image image-full"><img src="images/4.jpg" alt=""></a>
+									</div>
+									<div class="4u">
+										<a href="chrome.html" class="image image-full"><img src="images/5.jpg" alt=""></a>
+									</div>
+									<div class="4u">
+										<a href="rain.html" class="image image-full"><img src="images/6.jpg" alt=""></a>
+									</div>
+								</div>
+							</section>
+						</article>
+
+					<!-- Email -->
+						<article id="email" class="panel">
+							<header>
+								<h2>Email Me</h2>
+							</header>
+							<form action="send-email.php"  method="post">
+								<div class="5grid">
+									<div class="row">
+										<div class="6u">
+											<input type="text" id="name" class="text" name="name" placeholder="Name" />
+										</div>
+										<div class="6u">
+											<input type="email" id="mail" class="text" name="email" placeholder="Email" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="12u">
+											<input type="text" id="subject" class="text" name="subject" placeholder="Subject" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="12u">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<div class="row">
+										<div class="12u">
+											<input type="submit" id="btn" class="button" value="发送" />
+										</div>
+									</div>
+								</div>
+							</form>
+						</article>
+				</div>		
+			<!-- Footer -->
+				<div id="footer">
+					<ul class="links">
+						<li>&copy; Han Bote</li>
+						<li><a href="#">IceBreaker团队</a></li>
+						<li><a href="#">深圳拉丁方科技有限公司</a></li>
+					</ul>
+				</div>
+		  </div>
+			<script>
+			  $('#name').blur(function(){
+          var na = $('#name').val();
+          if(na.length<1){
+            alert('请输入用户名');
+          }
+        });
+        $('#mail').blur(function(){
+          if($('#mail').val() == ''){
+            alert('请输入邮箱');return;
+          }else if(!/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/.test($('#mail').val())){
+            alert('邮箱格式不正确');return;
+          }
+        });
+        $('#subject').blur(function(){
+          if($('#subject').val() == ''){
+            alert('请输入主题');return;
+          }
+        });
+        $('#message').blur(function(){
+          if($('#message').val() == ''){
+            alert('请输入要发送的内容');return;
+          }
+        });
+//      $("#btn").click(function(){
+//        alert("发送成功");
+//      });
+			</script>
+	</body>
+</html>

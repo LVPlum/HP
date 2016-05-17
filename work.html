@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弱者</title>
+		<script type="text/javascript" src="js/jquery-1.12.0.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" href="css/base.css" />
+		<style>
+		*{
+		  margin: 0px;
+		  padding: 0px;
+		}
+			#below{
+				width: 100%;
+				height: 667px;
+				background: darkcyan;
+				text-align: center;
+				position: relative;
+				color: white;
+				overflow: hidden;
+				background: linear-gradient(to bottom, rgba(27, 18, 18, 0),rgba(46, 70, 70, 0.38)), url(img/1458610912131.jpg) no-repeat;
+				/*background-size: 100% 100%;*/
+			}
+			.title{
+				position: absolute;
+			    top: 60px;
+			    left: 200px;
+			    font-size: 50px;
+			    text-shadow: 6px 4px 4px deepskyblue;
+			    opacity: 0;
+			    cursor: pointer;
+			    animation: anim-title 5s linear forwards;
+			    -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+			}
+			h1:hover{
+				color: black;
+			}
+			#below p{
+				display: block;
+				font-size: 20px;
+				font-weight: bold;
+				text-shadow: 0px -8px 11px rosybrown;
+				opacity: 0;
+				cursor: pointer;
+			}
+			p:hover{
+				color: white;
+			}
+			#below .delay1,#below .delay2,#below .delay3,#below .delay4,#below .delay5,#below .delay6,#below .delay7,#below .delay8,#below .delay9{
+				animation: anim-text1 20s linear forwards;
+			}
+			#below .delay10,#below .delay11,#below .delay12,#below .delay13,#below .delay14,#below .delay15,#below .delay16,#below .delay17,#below .delay18{
+				animation: anim-text2 20s linear forwards;
+			}
+			#below p i{
+				    font-size: 10px;
+				    display: block;
+				    margin-bottom: 20px;
+			}
+			.delay1{
+				animation-delay: 0.5s;
+			}
+			.delay2{
+				animation-delay: 1s;
+			}
+			.delay3{
+				animation-delay: 1.5s;
+			}
+			.delay4{
+				animation-delay: 2s;
+			}
+			.delay5{
+				animation-delay: 2.5s;
+			}
+			.delay6{
+				animation-delay: 3s;
+			}
+			.delay7{
+				animation-delay: 3.5s;
+			}
+			.delay8{
+				animation-delay: 4s;
+			}
+			.delay9{
+				animation-delay: 4.5s;
+			}
+			.delay10{
+				animation-delay: 9s;
+			}
+			.delay11{
+				animation-delay: 9.5s;
+			}
+			.delay12{
+				animation-delay: 10s;
+			}
+			.delay13{
+				animation-delay: 10.5s;
+			}
+			.delay14{
+				animation-delay: 11s;
+			}
+			.delay15{
+				animation-delay: 11.5s;
+			}
+			.delay16{
+				animation-delay: 12s;
+			}
+			.delay17{
+				animation-delay: 12.5s;
+			}
+			.delay18{
+				animation-delay: 13s;
+			}
+			@keyframes anim-title{
+				from{
+					transform: translate(0,200px);
+					opacity: 0;
+				}
+				to{
+					transform: translate(0,0);
+					opacity: 1;
+				}
+			}
+			@keyframes anim-text1{
+				0%{
+				transform: translate(-100px,600px);
+				opacity: 0;
+				}
+				100%{
+				transform: translate(-100px,23px);
+				opacity: 1;
+				color: deepskyblue;
+				}
+			}
+			@keyframes anim-text2{
+				from{
+					transform: translate(330px,200px);
+				}
+				to{
+					transform: translate(330px,-500px);
+					opacity: 1;
+					color: deepskyblue;
+				}
+			}
+			.box{
+		 		position: absolute;
+			    top: 140px;
+    			left: 568px;
+    			opacity: 0;
+    			animation: appear 5s linear forwards infinite;
+			}
+			.box .taiji{margin:0 auto;}
+			.taiji{
+				position: relative; 
+				width: 400px; 
+				height: 400px; 
+				border-radius: 50%; 
+				background-color: #fff;
+				border:solid 1px #ccc;    
+				animation: spin 6s linear forwards infinite;
+				/*animation-direction: 2;*/
+			}
+			.tj_1{
+				position: absolute;
+				top: 0px; 
+				width: 50%; 
+				height: 100%;
+			}
+			.tj_big1{
+				left: 0px; 
+				border-radius:100% 0 0 100% /50% 0 0 50%; 
+				background: #000;
+			}
+			.tj_big2{
+				right: 0px; 
+				border-radius:0 100% 100% 0 / 0 50% 50% 0; 
+				background: #fff;
+			}
+			.tj_2{
+				position: absolute; 
+				width: 50%; 
+				height: 50%; 
+				left: 25%; 
+				border-radius: 50%;
+			}
+			.tj_s1{
+				bottom: 0px; 
+				background: #fff;
+			}
+			.tj_s2{
+				top: 0px; 
+				background: #000;
+			}
+			.tj_ss{
+				position: absolute; 
+				width: 25%; 
+				height: 25%; 
+				left: 37.5%;
+				border-radius: 50%;
+			}
+			.tj_w{
+				top:37.5%;
+				background: #000;
+			}
+			.tj_b{
+				top:37.5%;
+				background: #fff;
+			}
+			@keyframes spin {
+				0% {
+					transform:rotate(0deg);
+				}
+				100% {
+					transform:rotate(360deg);
+				}
+			}
+			@keyframes appear{
+				0%{
+					opacity: 0;
+				}
+				50%{
+					opacity: 0.2;
+				}
+				100%{
+					opacity: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="below">
+			<h1 class="title">弱<br/>者</h1>
+		    <p class="delay1">大家回答我  为什么要低下头<br/><i>Answer me this,everyone.Why do you bow your heads?</i></p>
+		    <p class="delay2">重复一遍  为什么要底下头<br/><i>I repeat,why do you bow your heads?</i></p>
+		    <p class="delay3">我们是弱者！<br/><i>We are the weak!</i></p>
+		    <p class="delay4">现在如此  过去也是如此！<br/><i>we are the weak,just as we have always been!</i></p>
+		    <p class="delay5">是的  不是什么都没有改变吗！<br/><i>Yes,nothing has changed at all!</i></p>
+		    <p class="delay6">强者模仿弱者得来的武器  是无法发挥出其真正的力量的<br/><i>The strong may imitate our weapons,but they will never master them!</i></p>
+		    <p class="delay7">要说为什的话  我们的武器本质在于<br/><i>Because at the heart of our weapons lies...</i></p>
+		    <p class="delay8">那弱小到悲屈的软弱啊！<br/><i>a cowardice born of almost humiliating weakness!</i></p>
+		    <p class="delay9">我再次强调 <br/><i>I say a third time</i></p>
+		    <p class="delay10">我们是弱者！<br/><i>We are the weak!</i></p>
+		    <p class="delay11">我们宣誓作为弱者活下去<br/><i>We hereby declare that we will live as the weak</i></p>
+		    <p class="delay12">像弱者一样的战斗<br/><i>fight as the weak</i></p>
+		    <p class="delay13">然后以弱者的方式消灭强者！<br/><i>and as the weak,we will destory the strong!</i></p>
+		    <p class="delay14">就像过去一样 今后也会贯彻到底！<br/><i>As we once,and as we will always be</i></p>
+		    <p class="delay15">承认吧 我们是最弱的种族！<br/><i>Accept the fact that we are the wakest race</i></p>
+		    <p class="delay16">正因为我们天生什么都没有<br/><i>Accept that we are the weakest race</i></p>
+		    <p class="delay17">所以才能驾驭一切的<br/><i>one that can become anything</i></p>
+		    <p class="delay18">最弱的种族！<br/><i>because we were born with nothing!</i></p>
+			<div class="box">
+				<div class="taiji">
+					<div class="tj_1 tj_big1"></div>
+					<div class="tj_1 tj_bog2"></div>
+					<div class="tj_2 tj_s1">
+						<div class="tj_ss tj_w"></div>
+					</div>
+					<div class="tj_2 tj_s2">2                                                           
+						<div class="tj_ss tj_b"></div>
+					</div>
+				</div>
+		    </div>
+		    <embed src="sound/Aimer.mp3" width='10px' height="10px"></embed>
+		</div>
+		<script>
+			$(window).scroll(function(){
+				var c = $(window).scrollTop();
+				if(c>400){
+					$('#middle h1').addClass('h1');
+					$('#middle p').addClass('p');
+				}
+			});
+//			function run() {
+//			var image = document.getElementById('background');
+//			image.onload = function() {
+//				var engine = new RainyDay({
+//					image : this,
+//				});
+//				engine.rain([ [ 1, 2, 3000 ] ]);
+//				engine.rain([ [ 3, 4, 0.88 ], [ 5, 5, 0.9 ], [ 6, 2, 1 ] ], 100);
+//			}
+//			image.crossOrigin = 'anonymous';
+//			image.src = 'img/1458610364458.jpg';
+//		}
+		</script>
+	</body>
+</html>
